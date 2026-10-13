@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Course Website</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f4f8;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            padding: 15px;
+        }
+
+        .categories button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .courses {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px #ccc;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #2980b9;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        .enroll {
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .enroll:hover {
+            background-color: #219150;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+                margin: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Online Learning Platform</h1>
+        <p>Learn New Skills Anytime, Anywhere!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#courses">Courses</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="categories">
+        <h2>Course Categories</h2>
+
+        <div class="categories">
+            <button>Programming</button>
+            <button>Web Development</button>
+            <button>Data Science</button>
+            <button>Database</button>
+        </div>
+    </section>
+
+    <section id="courses">
+        <h2>Popular Courses</h2>
+
+        <div class="courses">
+
+            <div class="card">
+                <h3>HTML & CSS</h3>
+                <p>Instructor: Rahul Sharma</p>
+                <p>Duration: 4 Weeks</p>
+                <p>Price: ₹999</p>
+                <button class="enroll"
+                    onclick="enroll('HTML & CSS')">
+                    Enroll Now
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Java Programming</h3>
+                <p>Instructor: Priya Reddy</p>
+                <p>Duration: 6 Weeks</p>
+                <p>Price: ₹1499</p>
+                <button class="enroll"
+                    onclick="enroll('Java Programming')">
+                    Enroll Now
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Python Programming</h3>
+                <p>Instructor: Amit Kumar</p>
+                <p>Duration: 5 Weeks</p>
+                <p>Price: ₹1299</p>
+                <button class="enroll"
+                    onclick="enroll('Python Programming')">
+                    Enroll Now
+                </button>
+            </div>
+
+            <div class="card">
+                <h3>Data Science</h3>
+                <p>Instructor: Sneha Rao</p>
+                <p>Duration: 8 Weeks</p>
+                <p>Price: ₹1999</p>
+                <button class="enroll"
+                    onclick="enroll('Data Science')">
+                    Enroll Now
+                </button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>Contact: learn@example.com</p>
+        <p>&copy; 2026 Online Learning Platform</p>
+    </footer>
+
+    <script>
+        function enroll(course) {
+            alert("You have successfully enrolled in " + course);
+        }
+    </script>
+
+</body>
+</html>
